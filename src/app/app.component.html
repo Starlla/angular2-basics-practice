@@ -1,3 +1,14 @@
 <h1>
   {{title}}
 </h1>
+<p>{{age}}</p>
+<p>{{person.name}}-{{person.age}}</p>
+<input type = "text" [value] ="age">
+<p>{{getName()}}</p>
+<input type = "text" [value]="getName()">
+<button (click) = "setAge(30)"> Click me!</button>
+<input type="text" [(ngModel)]="person.name" />
+<p *ngFor ="let user of users">{{user}}</p>
+<hr>
+<!--<app-users [users] = "registeredUsers" (alertThrown) = "onChildAlert($event)"></app-users>-->
+<app-users (alertThrown) = "onChildAlert($event)"></app-users>
